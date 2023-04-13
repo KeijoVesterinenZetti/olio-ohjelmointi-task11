@@ -69,14 +69,11 @@ public class MainActivity extends AppCompatActivity {
                 Collections.sort(Storage.getInstance().getFoodList(), Food.nameComparator);
                 Toast.makeText(this,"Aakkosjärjestys", Toast.LENGTH_SHORT).show();
                 recyclerView.setAdapter(new RecyvlerViewAdapter(getApplicationContext(),Storage.getInstance().getFoodList()));
-                //mAdapter.notifyDataSetChanged();
                 return true;
             case R.id.menu_aikajarjestys:
                 Collections.sort(Storage.getInstance().getFoodList(), Food.timeComparator);
                 Toast.makeText(this,"Aikajärjestys", Toast.LENGTH_SHORT).show();
                 recyclerView.setAdapter(new RecyvlerViewAdapter(getApplicationContext(),Storage.getInstance().getFoodList()));
-                //mAdapter.notifyDataSetChanged();
-
                 return true;
         }
         return super.onOptionsItemSelected(item);
